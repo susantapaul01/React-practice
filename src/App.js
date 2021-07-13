@@ -6,13 +6,24 @@ import './App.css';
 // import { FunctionalProps, ClassProps } from './Components/UseOfProps/FunctionalProps';
 // import EventBind from './Components/EventBind/EventBind';
 // import EventBind2 from './Components/EventBind/EventBind2';
-import ParentComponent from './Components/MethodAsProps/ParentComponent';
-
+// import ParentComponent from './Components/MethodAsProps/ParentComponent';
+// import IfElseRendering from './Components/ConditionalRendering/IfElseRendering';
+// import IfElseRendering2 from './Components/ConditionalRendering/IfElseRendering2';
+// import ObjectDestructuring from './Components/ObjectDestructuring/ObjectDestructuring';
+// import Form from './Components/FormHandeling/Form';
+import Clock from './Components/StateAndsetState/Clock';
 
 function App() {
+    console.log('App Component Rendering');
     return (
         <div className="App">
-            <ParentComponent />
+            
+            <Clock />
+            {/* <Form /> */}
+            {/* <ObjectDestructuring /> */}
+            {/* <IfElseRendering2 /> */}
+            {/* <IfElseRendering /> */}
+            {/* <ParentComponent /> */}
             {/* <EventBind2 /> */}
             {/* <FunctionalProps name='susanta' salary='400' age='15' /> */}
             {/* <FunctionalProps name='roni' salary='500' age='18' /> */}
