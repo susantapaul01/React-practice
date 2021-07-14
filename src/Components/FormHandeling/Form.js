@@ -1,62 +1,61 @@
 import React, { Component } from 'react';
 
 export class Form extends Component {
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-            usernamer: '',
-            comments: '',
-            topic: 'react'
-        }
+    state = {
+        title: '',
+        textarea: '',
+        myselect: '',
+        checkOne: false
     }
 
-    handelValue = (event) => {
-        this.setState({
-            username: event.target.value
-        })
+    handelChange = (event) => {
+        if(event.target.type === 'text') {
+            this.setState({
+                title: event.target.value
+            })
+        } 
+        else if(event.target.type === 'textarea') {
+            this.setState({
+                textarea: event.target.value
+            })
+        } 
+        else if(event.target.type === 'select-one') {
+            this.setState({
+                myselect: event.target.value
+            })
+        } else if(event.target.type === 'checkbox') {
+            this.setState({
+                checkOne: event.target.checked
+            })
+        }
+        else {
+            console.log('Nothing here')
+        }
     }
-    handelComments = (event) => {
-        this.setState({
-            comments: event.target.value
-        })
+    mySubmitHandeler = (event) => {
+        const { title, textarea, myselect, checkOne } = this.state;
+        event.preventDefault();
+        console.log(title, textarea, myselect, checkOne)
     }
-    handelTopic = (event) => {
-        this.setState({
-            topic: event.target.value
-        })
-    }
-    handelSubmit = (event) => {
-        alert(`${this.state.username}, ${this.state.comments}, ${this.state.topic}`)
-        event.preventDefault()
-    }
-    
     render() {
-        const { username, comments, topic } = this.state;
+        const { title, textarea, myselect, checkOne } = this.state;
         return (
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-md-4 offset-4'>
-                        <form onSubmit={this.handelSubmit} className='mt-3'>
-                            <div className="mb-3">
-                                <label className="form-label">User Name</label>
-                                <input type="text" value={username} onChange={this.handelValue} className="form-control" />
-                            </div>
-                            <div className="mb-3">
-                                <label for="" class="form-label">Example textarea</label>
-                                <textarea value={comments} onChange={this.handelComments} class="form-control" id="" rows="3"></textarea>
-                            </div>
-                            <div className="mb-3">
-                                <select class="form-select" value={topic} onChange={this.handelTopic}>
-                                    <option selected value='react'>React</option>
-                                    <option value="angular">Angular</option>
-                                    <option value="vue">Vue</option>
-                                </select>
-                            </div>
-                            <button type="submit" className="btn btn-primary btn-sm" >Submit</button>
-                        </form>
-                    </div>
-                </div>
+            <div>
+                <form onSubmit={this.mySubmitHandeler}>
+                    <input type='text' placeholder='Enter name' value={title} onChange={this.handelChange} />
+                    <br /><br />
+                    <textarea placeholder='Enter Text' value={textarea} onChange={this.handelChange}></textarea>
+                    <br /><br />
+                    <select value={myselect} onChange={this.handelChange}>
+                        <option value='react'>React</option>
+                        <option value='angular'>Angular</option>
+                        <option value='vue'>Vue</option>
+                    </select>
+                    <br /><br />
+                    <input type='checkbox' checked={checkOne} value='Car' onChange={this.handelChange} /> Car
+                    <br /><br />
+                    <input type='submit' value='Submit' />
+                </form>
             </div>
         )
     }

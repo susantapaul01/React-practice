@@ -11,15 +11,16 @@ import './App.css';
 // import IfElseRendering2 from './Components/ConditionalRendering/IfElseRendering2';
 // import ObjectDestructuring from './Components/ObjectDestructuring/ObjectDestructuring';
 // import Form from './Components/FormHandeling/Form';
-import Clock from './Components/StateAndsetState/Clock';
+// import ClockList from './Components/StateAndLifecycle/ClockList';
+import Form from './Components/FormHandeling/Form';
 
 function App() {
-    console.log('App Component Rendering');
+    // const quantities = [1, 2, 3];
     return (
         <div className="App">
             
-            <Clock />
-            {/* <Form /> */}
+            <Form />
+            {/* <ClockList quantities={quantities} /> */}
             {/* <ObjectDestructuring /> */}
             {/* <IfElseRendering2 /> */}
             {/* <IfElseRendering /> */}
