@@ -12,14 +12,17 @@ import './App.css';
 // import ObjectDestructuring from './Components/ObjectDestructuring/ObjectDestructuring';
 // import Form from './Components/FormHandeling/Form';
 // import ClockList from './Components/StateAndLifecycle/ClockList';
-import Form from './Components/FormHandeling/Form';
+// import Form from './Components/FormHandeling/Form';
+import Calulator from "./Components/BoilingVerdict/Calulator";
+
 
 function App() {
     // const quantities = [1, 2, 3];
     return (
         <div className="App">
             
-            <Form />
+            <Calulator />
+            {/* <Form /> */}
             {/* <ClockList quantities={quantities} /> */}
             {/* <ObjectDestructuring /> */}
             {/* <IfElseRendering2 /> */}
