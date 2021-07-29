@@ -13,15 +13,51 @@ import './App.css';
 // import Form from './Components/FormHandeling/Form';
 // import ClockList from './Components/StateAndLifecycle/ClockList';
 // import Form from './Components/FormHandeling/Form';
-import Calulator from "./Components/BoilingVerdict/Calulator";
-
+// import Calulator from "./Components/BoilingVerdict/Calulator";
+// import Emoji from './Components/Composition/Emoji';
+// import Text from './Components/Composition/Text';
+// import Bracket from './Components/Composition/Bracket';
+// import ClickCounter from './Components/ClickCounter/ClickCounter';
+// import HoverCounter from './Components/ClickCounter/HoverCounter';
+// import Counter from './Components/RenderProps/Counter';
+// import ClickedComponent from './Components/RenderProps/ClickedComponent';
+// import HoverCounter from './Components/RenderProps/HoverCounter';
+// import ClickedComponent from './Components/HOC/ClickedComponent';
+// import HoverComponent from './Components/HOC/HoverComponent';
+// import CommonComponent from './Components/RenderProps2/CommonComponent';
+// import MyClickComponent from './Components/RenderProps2/MyClickComponent';
+// import TextComponent from './Components/RenderProps2/IncreaseComponent';
+import MainApi from './Components/ContextApi/MainApi';
 
 function App() {
     // const quantities = [1, 2, 3];
     return (
         <div className="App">
-            
-            <Calulator />
+            <MainApi />
+            {/* <CommonComponent render = {(count, incrementHandler) => (
+                <MyClickComponent count={count} incrementHandler={incrementHandler} />
+            )} />
+            <CommonComponent render = {(count, incrementHandler) => (
+                <TextComponent count={count} incrementHandler={incrementHandler} />
+            )} /> */}
+            {/* <ClickedComponent />
+            <HoverComponent /> */}
+            {/* <Counter render = {(message, count, changeMessage, increaseCount) => (
+                <ClickedComponent message={message} changeMessage={changeMessage} />
+            )} />
+            <Counter render = {(message, count, changeMessage, increaseCount) => (
+                <HoverCounter count={count} increaseCount={increaseCount} />
+            )} /> */}
+
+            {/* <ClickCounter />
+            <HoverCounter /> */}
+            {/* <Emoji>
+                {({addEmoji}) => 
+                <Bracket>
+                    {({ Bracket }) => <Text addEmoji={addEmoji} Bracket={Bracket} />}
+                </Bracket> }
+            </Emoji> */}
+            {/* <Calulator /> */}
             {/* <Form /> */}
             {/* <ClockList quantities={quantities} /> */}
             {/* <ObjectDestructuring /> */}
